@@ -1,0 +1,44 @@
+
+**** 01/07/18 21:10:32 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ *gilbert multiplier
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+.lib 'nom.lib'
+rc4 1 2 10k
+rl1 1 3 11k
+rl2 1 4 11k
+re1 14 13 15k
+re2 15 16 15k
+q2 2 2 6 q2n2222
+q1 2 2 5 q2n2222
+q3 3 5 7 q2n2222
+q4 4 6 7 q2n2222
+q5 3 6 8 q2n2222
+q6 4 5 8 q2n2222
+q7 7 11 15 q2n2222
+q8 8 12 16 q2n2222
+q9 6 10 14 q2n2222
+q10 5 9 13 q2n2222
+ix2 14 17 dc 1m
+ix1 13 17 dc 1m
+iy1 15 16 dc 1m
+iy2 16 17 dc 1m
+vcc 1 0 dc 15
+vee 0 17 dc 15
+vx 9 10 dc 0V
+vy 12 11 dc 0V
+.dc vd -20V 20V 5V
+.probe
+.end
+
+
+ERROR(ORPSIM-15090): DC device vd is undefined
+
